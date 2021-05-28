@@ -1,0 +1,41 @@
+.progress {
+    margin-top: 120px;
+    display: grid;
+    grid-template: repeat(2, 70px) / repeat(3, 350px);
+    column-gap: 44px;
+    row-gap: 30px;
+    &__item {
+        width: 350px;
+        height: 70px;
+        display: grid;
+        grid-template-columns: 200px 40px;
+        justify-content: space-between;
+        align-items: space-between;
+        &_title {
+            position: relative;
+            line-height: 36px;
+            padding-left: 13px;
+            @include before_circle;
+        }
+        &_percent {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 36px;
+            color: #FFFFFF;
+        }
+        &_line {
+            width: 350px;
+            height: 14px;
+            background-color: #E8E4DE;
+            border-radius: 4px;
+            margin-top: 20px;
+            &-progress {
+                // width: 265px;
+                height: 14px;
+                background: #1A8C8C;
+                border: 1px solid #1A8C8C;
+                border-radius: 4px;
+            }
+        }
+    }
+}

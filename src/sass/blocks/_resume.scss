@@ -1,0 +1,117 @@
+.resume {
+    padding-top: 120px;
+    &__title {
+        position: relative;
+        text-align: center;
+        @include before_circle; 
+        &:before {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &:hover {
+            &:before {
+                opacity: 0.5;
+                transition: 1.5s all;
+                width: 150px;
+                border-radius: 0;
+            }
+        }
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    &__wrapper {
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 135px;
+    }
+    &__column {
+        &-title {
+            position: relative;
+            padding-left: 35px; 
+            margin-bottom: 0;
+            @include before_circle;
+            &:before {
+                width: 15px;
+                height: 15px;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                &:after {
+                    content: "";
+                    width: 1px;
+                    height: calc(100% + 18px);
+                    position: absolute;
+                    top: -18px;
+                    left: 0;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        &::before {
+            content: '';
+            height: 1px;
+            width: 43px;
+            position: absolute;
+            top: 47px;
+            background-color: #fff;
+            transition: 1.0s all;
+        }
+        &:hover {
+            &:before {
+                width: 0;
+            }
+        }
+        &-head {
+            position: relative;
+            padding: 35px 0 0 100px;
+        }
+        &-subtitle {
+            margin-bottom: 0;
+        }
+        &-location {
+            font-style: normal;
+            font-size: 12px;
+            color: #FFFFFF;
+        }
+        &-icon {
+            position: absolute;
+            top: 43px;
+            left: 60px;
+            @include before_circle;
+            &:before {
+                z-index: 0;
+                left: -20px;
+                top: -13px;
+            }
+            img {
+                position: relative;
+            }
+            &:hover {
+                &:before {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50% 0 0 0;
+                }
+            }
+
+        }
+        &-body {
+            padding: 12px 0 0 45px;
+            font-style: normal;
+            font-size: 12px;
+            line-height: 18px;
+            color: #FFFFFF;
+        }
+    }
+}

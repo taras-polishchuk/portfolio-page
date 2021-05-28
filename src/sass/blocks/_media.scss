@@ -1,0 +1,410 @@
+@media (max-width: 1439px) {
+    .sidepanel {
+        display: none;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .sidepanel {
+        display: none;
+    }
+    .container {
+        width: 970px;
+    }
+    .about{
+        padding-top: 60px;
+        &__wrapper {
+            grid-template-columns: 400px  476px;
+            column-gap: 40px;
+            row-gap: 20px;
+        }
+        &__skills {
+            &-item {
+                grid-template-columns: 40px 185px;
+                column-gap: 10px;
+            }
+        }
+    } 
+    .resume {
+       padding-top: 70px;
+       &__wrapper {
+           padding-top: 40px;
+           grid-template-columns: repeat(2,380px);
+           column-gap: 80px;
+       }
+    }
+    .skills {
+        &__wrapper {
+            grid-template-columns: repeat(3,270px);
+            justify-content: center;
+        }
+    }
+    .progress {
+        grid-template: repeat(2,70px)/repeat(2,350px);
+        justify-content: center;
+    }
+
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 270px);
+            grid-auto-rows: 280px;
+            justify-content: space-around;
+            row-gap: 35px;
+            .horizontal, .vertical {
+                grid-column: unset;
+                grid-row: unset;
+            }
+        }
+    }
+    .price {
+        &__wrapper {
+            column-gap: unset;
+        }
+    }
+    .contacts {
+        padding-top: 80px;
+        &__wrapper {
+            grid-template-columns: 300px 551px;
+            column-gap: 40px;
+        }
+        &__photo {
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__form {
+            grid-template-columns: repeat(2,260px);
+            gap: 20px;
+        }
+        &__input {
+            input {
+                width: 260px;
+            }
+        }
+        &__textarea {
+            textarea {
+                width: 540px;
+            }
+        }
+        &__triggers {
+            .btn {
+                font-size: 13px;
+                width: 200px;
+            }
+        }
+        &__policy {
+            span {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    } 
+    .title {
+        &_fz36 {
+            font-size: 30px;
+        }
+    }
+    .about {
+        &__wrapper {
+            grid-template-columns: 300px 400px;
+        }
+        &__photo {
+            width: 300px;
+        }
+        &__skills {
+            grid-template-columns: 380px;
+            grid-auto-rows: minmax(115px, auto);
+            row-gap: 0;
+            &-item {
+                grid-template-columns:  40px 300px;
+            }
+        }
+    }
+    .resume {
+        &__wrapper {
+            padding: 0;
+            grid-template-columns:  500px;
+        }
+    }
+    .skills {
+        &__wrapper {
+            grid-template-columns: repeat(2, 270px);
+            justify-content: center;
+        }
+    }
+    .price {
+        &__wrapper {
+            margin-top: 20px;
+            grid-template-columns: repeat(1,450px);
+            row-gap: 20px;
+        }
+        &__item {
+            &-title {
+                &:before {
+                    top: 11px;
+                }
+            }
+        }
+    }
+    .contacts {
+        &__wrapper {
+            grid-template-columns: auto;
+            justify-content: center;
+        }
+        &__content {
+            width: 100%;
+        }
+        &__title {
+            display: block;
+            margin: 0 auto;
+        }
+        
+        &__photo {
+            display: none;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .title {
+        line-height: 39px;
+        &_fz48 {
+            font-size: 30px;
+        }
+    }
+    .promo {
+        padding: 170px 0 0 0;
+        &__title {
+            width: 330px;
+            margin: 0;
+        }
+    }
+    .about {
+        &__wrapper {
+            grid-template: 340px auto auto  / 1fr;
+        }
+        &__photo {
+            grid-row: unset;
+            margin: 0 auto;
+            width: 540px;
+            background: url('../../img/photo.jpg') no-repeat 50%/cover;
+            background-position: 0 -45px;
+            img {
+                object-fit: cover;
+                display: none;
+            }
+        }
+        &__skills {
+            grid-template-columns: repeat(2, 260px );
+            column-gap: 10px;
+            row-gap: 20px;
+            &-item {
+                grid-template-columns: 40px 200px;
+                column-gap: 10px;
+            }
+        }
+    }
+    .resume {
+        &__wrapper {
+            padding-left: 20px;
+        }
+    }
+    .progress {
+        margin-top: 70px;
+        grid-template: repeat(2,70px)/repeat(1,350px);
+        justify-content: center;
+    }
+    .contacts {
+        &__form {
+            display: block;
+            gap: 20px;
+        }
+        &__input {
+            margin-bottom: 20px;
+            input {
+                width: 494px;
+            }
+        }
+        &__textarea {
+            textarea {
+                width: 494px;
+            }
+        }
+        &__triggers {
+            .btn {
+                font-size: 13px;
+                width: 200px;
+            }
+        }
+        &__policy {
+            span {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .hamburger {
+        right: 20px;
+    }
+    .menu {
+        &__block {
+            width: 250px;
+            padding-top: 140px;
+            padding-left: 20px;
+        }
+    }    
+    .title {
+        line-height: 39px;
+        &_fz48 {
+            font-size: 28px;
+        }
+    }
+    .promo {
+        padding-top: 50%;
+        padding-left: 10px;
+        &__title {
+            width: 300px;
+            margin: 0;
+        }
+    }
+
+    .about { 
+        .title {
+            &_fz36 {
+                font-size: 24px;
+                margin-bottom: 5px;
+            }
+        }
+        &__text {
+            margin: 10px 0;
+        }
+      
+        &__photo {
+            width: 300px;
+            background-position: 0 -45px;
+        }
+        &__skills {
+            grid-template-columns: 300px;
+            &-item {
+                grid-template-columns: 40px 200px;
+                column-gap: 10px;
+            }
+        }
+    }
+
+    .resume {
+        &__wrapper {
+            padding: 0;
+            grid-template-columns: 300px;
+            justify-content: center;
+        }
+    }
+
+    .skills {
+        &__wrapper {
+            grid-template-columns: 270px;
+            justify-content: center;
+        }
+    }
+    .progress {
+        grid-template-columns: 310px;
+        justify-content: center;
+        &__item {
+            width: 310px;
+            &_line {
+                width: 310px;
+            }
+        }
+    }
+    .portfolio {
+        padding-top: 40px;
+        &__wrapper {
+            row-gap: 10px;
+        }
+    }
+
+    .price {
+        &__wrapper {
+            grid-template-columns: repeat(1, 270px);
+            row-gap: 40px;
+        }
+        &__item {
+            &-title {
+                font-size: 12px;
+                line-height: 10px;
+                &::before {
+                    top: -2px;
+                }
+            }
+            &-descr {
+                margin-top: 0;
+            }
+        }
+    }
+    .contacts {
+        &__wrapper {
+            grid-template-columns: 300px;
+        }
+        &__text {
+            font-size: 11px;
+        }
+        &__form {
+            display: block;
+        }
+        &__input {
+            margin-bottom: 20px;
+            input {
+                width: 280px;
+            }
+        }
+        &__textarea {
+            textarea {
+                width: 280px;
+            }
+        }
+        &__triggers {
+            position: relative;
+            display: block;
+            .btn {
+                position: absolute;
+                top: 50px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 13px;
+                width: 200px;
+            }
+        }
+        &__policy {
+            display: block;
+            position: absolute;
+            top: 0;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            span {
+                width: 300px;
+                font-size: 11px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+}

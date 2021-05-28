@@ -1,0 +1,38 @@
+.sidepanel {
+    position: fixed;
+    top: 50%;
+    left: -40px;
+    min-width: 340px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    transform: rotate(-90deg);
+    color: #fff;
+    &__divider {
+        width: 70px;
+        height: 0px;
+        border: none;
+        border-top: 2px solid #FFFFFF;
+    }
+    &__link {
+        transition: 1.0s all;
+        &:hover {
+            transform: translateY(10px)
+        }
+        img {
+            width: 20px;
+            height: 20px;
+            transform: rotate(90deg);
+            color: #fff;
+            transition: 0.5s all;
+        }
+        
+    }
+    &__text {
+        font-style: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+}
