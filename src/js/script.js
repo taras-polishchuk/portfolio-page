@@ -14,7 +14,9 @@ links.forEach(link => {
 const menu = document.querySelector('.menu'),
       hamburger = document.querySelector('.hamburger'),
       closeBtn = document.querySelector('.menu__close'),
-      overlay = document.querySelector('.menu__overlay');
+      overlay = document.querySelector('.menu__overlay'),
+      menuLinks = document.querySelectorAll('.menu__link a'),
+      menuSocialLinks = document.querySelectorAll('.menu__social a');
 
   //show
 hamburger.addEventListener('click', (e) => {
@@ -25,10 +27,18 @@ hamburger.addEventListener('click', (e) => {
   //close
 function closeMenu(elem) {
     elem.addEventListener('click', (e) =>{
-        e.preventDefault();
+        // e.preventDefault();
         menu.classList.toggle('active');
     });
 }
+
+menuLinks.forEach(link => {
+   closeMenu(link);
+});
+
+menuSocialLinks.forEach(link => {
+    closeMenu(link);
+}); 
 
 closeMenu(closeBtn);
 closeMenu(overlay);
